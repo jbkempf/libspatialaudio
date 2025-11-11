@@ -151,8 +151,8 @@ target_sources(spatialaudio
 )
 
 target_include_directories(spatialaudio
-    PRIVATE
-        ${CMAKE_CURRENT_BINARY_DIR}/include
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
 )
 target_compile_definitions(spatialaudio
     PRIVATE
